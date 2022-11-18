@@ -8,7 +8,7 @@ class Solution {
         void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
             vector<int> result;
             for (int i = 0, i1 = 0, i2 = 0;i < n + m;i++) {
-                if (i2 >= n || (i1 < m && nums1[i1] < nums2[i2])) {
+                if (i2 >= n || (i1 > 0 && nums1[i1] < nums2[i2])) {
                     result.push_back(nums1[i1]);
                     i1++;
                 }else{
